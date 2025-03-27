@@ -31,6 +31,10 @@ class Tree:
         Метод суммирует собранные фрукты.
         :param pick_act: Количество уже собранных фруктов
 
+        Пример:
+        >>> pear_three = Tree (30, 18)
+        >>> pear_three.pick_fruits(22)
+
         """
         ...
 class AudioPlayer:
@@ -47,7 +51,7 @@ class AudioPlayer:
         self.type = file_extension
         self.filename = None
 
-    def open(self, file):
+    def open(self, file)->None:
         """
         Метод отркывает файл
         Добавляет новый атрибут к экземпляру
@@ -77,7 +81,7 @@ class Vase:
 
         self.vase_volume = vase_volume
         if vase_volume <= 0:
-            raise ValueError("Объем кружки не может быть отрицательным")
+            raise ValueError("Объем вазы не может быть отрицательным")
 
     def rename_form(self) -> str:
         """Метод изменяет форму вазы"""
